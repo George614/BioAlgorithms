@@ -2,6 +2,7 @@
 Set up function to test the Firefly algorithm
 """
 
+import numpy as np
 import math
 
 def fourPeaks(x,y):
@@ -10,5 +11,25 @@ def fourPeaks(x,y):
     term3 = 2 * (math.e**(-x**2-y**2) + math.e**(-x**2-(y+4)**2))
     return term1 + term2 + term3
 
+
+def ackley(x):
+    dim = x.size
+    return -20 * np.exp(-0.02*np.sqrt(1/dim * np.sum(np.square(x))))-np.exp(1/dim * np.sum(np.cos(2*np.pi*x)))+20+np.e
+
+def easom(x):
+    dim = x.size
+    return (-1)**(dim+1)*np.prod(np.cos(x)*np.exp(-1*np.sum(np.square(x-np.pi))))
+
+def rosenbrock(x):
+    y = 0
+    for i in range(x.size-1):
+        y += (x[i]-1)**2 + 100*(x[i+1]-x[i]**2)**2
+    return y
+
 if __name__ == '__main__':
-    print(fourPeaks(4,4))
+    test_a = ackley(np.zeros((7,)))
+    print(test_a)
+    test_e = easom(np.ones((6,))*np.pi)
+    print(test_e)
+    test_r = rosenbrock(np.ones((6,)))
+    print(test_r)
