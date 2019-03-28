@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4715e2a4-f614-4b1c-a6d4-7ae37c6a4a84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DifferentialEvolution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParticleSwarm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BioAISystems.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BioAISystems.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestFunction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DifferentialEvolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/DifferentialEvolution.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Firefly.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+            <state relative-caret-position="221">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding>
                 <element signature="e#42#60#0" expanded="true" />
               </folding>
@@ -32,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DifferentialEvolution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="21">
+              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -79,7 +75,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="280" />
+    <option name="x" value="373" />
     <option name="y" value="17" />
     <option name="width" value="1472" />
     <option name="height" value="1000" />
@@ -181,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553648545370</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add new benchmark functions">
+      <created>1553712759188</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553712759189</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -194,7 +197,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="280" y="17" width="1472" height="1000" extended-state="1" />
+    <frame x="373" y="17" width="1472" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15620641" />
@@ -219,7 +222,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="add basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basics" />
+    <MESSAGE value="add new benchmark functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new benchmark functions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
@@ -239,8 +243,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Firefly.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+        <state relative-caret-position="221">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding>
             <element signature="e#42#60#0" expanded="true" />
           </folding>
@@ -249,8 +253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DifferentialEvolution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="21">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
         </state>
       </provider>
     </entry>
