@@ -19,8 +19,6 @@ def egg_create(x):
 def exponential_(x):
     return -np.exp(-0.5 * np.sum(np.square(x)))
 
-
-
 def ackley(x):
     dim = x.size
     return -20 * np.exp(-0.02*np.sqrt(1/dim * np.sum(np.square(x))))-np.exp(1/dim * np.sum(np.cos(2*np.pi*x)))+20+np.e
@@ -35,7 +33,7 @@ def rosenbrock(x):
         y += (x[i]-1)**2 + 100*(x[i+1]-x[i]**2)**2
     return y
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     test_a = ackley(np.zeros((7,)))
     print(test_a)
     test_e = easom(np.ones((6,))*np.pi)

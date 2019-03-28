@@ -4,6 +4,7 @@ Find optima of a given function using firefly algorithm
 
 from Firefly import Firefly
 import numpy as np
+import operator
 
 class FireflyOptimizer:
     def __init__(self, **kwargs):
