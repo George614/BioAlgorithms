@@ -31,5 +31,6 @@ class Firefly:
             elif position > self.upper_bound:
                 self.position[idx] = self.upper_bound
 
-    def update_intensity(self,obj_func):
+    def update_intensity(self, obj_func):
         self.intensity = obj_func(self.position)
+
