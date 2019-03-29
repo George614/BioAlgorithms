@@ -17,8 +17,9 @@ class DiffEvo:
         for i in range(iterations):
             for j in range(popsize):
                 idxs = [idx for idx in range(popsize) if idx != j]
+                # pick three vectors from the population
                 p, q, r = self.pop[np.random.choice(idxs, 3, replace=False)]
-                # generate our donate vector and clamp it between 0 and 1
+                # generate donate vector and clamp it between 0 and 1
                 v = np.clip(p + F * (q - r), 0, 1)
                 # carry out binomial crossover scheme
                 cross_points = np.random.rand(self.dimensions) < Cr  # crossover parameter
@@ -37,5 +38,5 @@ class DiffEvo:
 
 
 if __name__ == '__main__':
-    result = list(de(lambda x: sum(x**2)/len(x), bounds=[(-100, 100)] * 8))
+    result = list(DiffEvo(lambda x: sum(x**2)/len(x), bounds=[(-100, 100)] * 8))
     print(result[-1])

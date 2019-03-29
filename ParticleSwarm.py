@@ -18,7 +18,7 @@ class Particle:
         self.velocity_i = []  # particle velocity
         self.pos_best_i = []  # best position individual
         self.err_best_i = -1  # best error individual
-        self.err_i = -1  # error individual
+        self.err_i = -1       # error individual
 
         for i in range(0, num_dimensions):
             self.velocity_i.append(random.uniform(-1, 1))
@@ -34,18 +34,18 @@ class Particle:
             self.err_best_i = self.err_i
 
     # update new particle velocity
-    def update_velocity(self, pos_best_g):
-        w = 0.5  # constant inertia weight (how much to weigh the previous velocity)
-        c1 = 1  # cognative constant
-        c2 = 2  # social constant
+    def update_velocity(self, inertia=0.5, pos_best_g=None):
+        # constant inertia weight (how much to weigh the previous velocity)
+        alpha = 2  # cognitive constant
+        beta = 2  # social constant
 
         for i in range(0, num_dimensions):
-            r1 = random.random()
-            r2 = random.random()
+            epsilon1 = random.random()
+            epsilon2 = random.random()
 
-            vel_cognitive = c1 * r1 * (self.pos_best_i[i] - self.position_i[i])
-            vel_social = c2 * r2 * (pos_best_g[i] - self.position_i[i])
-            self.velocity_i[i] = w * self.velocity_i[i] + vel_cognitive + vel_social
+            vel_cognitive = alpha * epsilon1 * (self.pos_best_i[i] - self.position_i[i])
+            vel_social = beta * epsilon2 * (pos_best_g[i] - self.position_i[i])
+            self.velocity_i[i] = inertia * self.velocity_i[i] + vel_cognitive + vel_social
 
     # update the particle position based off new velocity updates
     def update_position(self, bounds):
@@ -61,10 +61,10 @@ class Particle:
                 self.position_i[i] = bounds[i][0]
 
 
-class PSO():
+class PSO:
     def __init__(self, costFunc, x0, bounds, num_particles, maxiter):
         global num_dimensions
-
+        # x0 is initial position of
         num_dimensions = len(x0)
         err_best_g = -1  # best error for group
         pos_best_g = []  # best position for group
