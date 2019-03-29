@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4715e2a4-f614-4b1c-a6d4-7ae37c6a4a84" name="Default Changelist" comment="merge">
-      <change beforePath="$PROJECT_DIR$/.idea/BioAISystems.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BioAISystems.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4715e2a4-f614-4b1c-a6d4-7ae37c6a4a84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/experiments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DifferentialEvolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/DifferentialEvolution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FireflyOpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/FireflyOpt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParticleSwarm.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParticleSwarm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestFunction.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Firefly.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
+            <state relative-caret-position="125">
               <caret line="12" column="17" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
@@ -39,8 +36,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FireflyOpt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-98">
+            <state relative-caret-position="17">
               <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/Programs/Python/Lib/site-packages/yabox/problems/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="721">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -49,16 +55,16 @@
         <entry file="file://$PROJECT_DIR$/DifferentialEvolution.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="533">
-              <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/Programs/Python/Lib/site-packages/yabox/problems/base.py">
+        <entry file="file://$PROJECT_DIR$/experiments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -66,8 +72,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ParticleSwarm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state relative-caret-position="1377">
+              <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+              <folding>
+                <element signature="e#116#134#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,14 +98,16 @@
       <list>
         <option value="$PROJECT_DIR$/Firefly.py" />
         <option value="$PROJECT_DIR$/FireflyOpt.py" />
-        <option value="$PROJECT_DIR$/DifferentialEvolution.py" />
         <option value="$PROJECT_DIR$/TestFunction.py" />
+        <option value="$PROJECT_DIR$/experiments.py" />
+        <option value="$PROJECT_DIR$/DifferentialEvolution.py" />
         <option value="$PROJECT_DIR$/ParticleSwarm.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1350" />
+    <option name="x" value="1343" />
+    <option name="y" value="4" />
     <option name="width" value="1217" />
     <option name="height" value="1047" />
   </component>
@@ -108,6 +119,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,7 +131,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553712759189</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="DE code modified in particle">
+      <created>1553744650977</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1553744650977</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -245,7 +263,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1350" y="0" width="1217" height="1047" extended-state="0" />
+    <frame x="1343" y="4" width="1217" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18999152" />
@@ -271,17 +289,11 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="add basics" />
     <MESSAGE value="add new benchmark functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new benchmark functions" />
+    <MESSAGE value="DE code modified in particle" />
+    <option name="LAST_COMMIT_MESSAGE" value="DE code modified in particle" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-    <entry file="file://$PROJECT_DIR$/Firefly.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestFunction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -289,9 +301,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/Programs/Python/Lib/site-packages/yabox/problems/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Firefly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FireflyOpt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
+        <state relative-caret-position="17">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
@@ -299,21 +325,24 @@
     <entry file="file://$PROJECT_DIR$/DifferentialEvolution.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Programs/Python/Lib/site-packages/yabox/problems/base.py">
+    <entry file="file://$PROJECT_DIR$/experiments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParticleSwarm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="1377">
+          <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+          <folding>
+            <element signature="e#116#134#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
