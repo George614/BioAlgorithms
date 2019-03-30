@@ -13,56 +13,49 @@ def func1(x):
     return total
 
 class Particle:
-    def __init__(self, x0):
-        self.position_i = []  # particle position
-        self.velocity_i = []  # particle velocity
-        self.pos_best_i = []  # best position individual
-        self.err_best_i = -1  # best error individual
-        self.err_i = -1       # error individual
-
-        for i in range(0, num_dimensions):
-            self.velocity_i.append(random.uniform(-1, 1))
-            self.position_i.append(x0[i])
+    def __init__(self, bounds, dim):
+        self.dim = dim
+        self.position = np.random.uniform(bounds[0], bounds[1], self.dim)  # particle position
+        self.velocity = np.zeros(self.dim)  # particle velocity
+        self.pos_best = None  # best position individual
+        self.err_best = -1  # best error individual
+        self.error = -1       # error individual
 
     # evaluate current fitness
-    def evaluate(self, costFunc):
-        self.err_i = costFunc(self.position_i)
-
+    def evaluate(self, obj_func):
+        self.error = obj_func(self.position)
         # check to see if the current position is an individual best
-        if self.err_i < self.err_best_i or self.err_best_i == -1:
-            self.pos_best_i = self.position_i
-            self.err_best_i = self.err_i
+        if self.error < self.err_best or self.err_best == -1:
+            self.pos_best = self.position
+            self.err_best = self.error
 
     # update new particle velocity
-    def update_velocity(self, inertia=0.5, pos_best_g=None):
-        # constant inertia weight (how much to weigh the previous velocity)
-        alpha = 2  # cognitive constant
-        beta = 2  # social constant
-
-        for i in range(0, num_dimensions):
-            epsilon1 = random.random()
-            epsilon2 = random.random()
-
-            vel_cognitive = alpha * epsilon1 * (self.pos_best_i[i] - self.position_i[i])
-            vel_social = beta * epsilon2 * (pos_best_g[i] - self.position_i[i])
-            self.velocity_i[i] = inertia * self.velocity_i[i] + vel_cognitive + vel_social
+    def update_velocity(self, inertia=0.5, # constant inertia weight (how much to weigh the previous velocity)
+                        beta = 2,  # cognitive constant
+                        alpha = 2,  # social constant
+                        pos_best_g=None):
+        epsilon1 = np.random.rand()
+        epsilon2 = np.random.rand()
+        vel_cognitive = beta * epsilon2 * (self.pos_best - self.position)
+        vel_social = alpha * epsilon1 * (pos_best_g - self.position)
+        self.velocity = inertia * self.velocity + vel_cognitive + vel_social
 
     # update the particle position based off new velocity updates
     def update_position(self, bounds):
         for i in range(0, num_dimensions):
-            self.position_i[i] = self.position_i[i] + self.velocity_i[i]
+            self.position[i] = self.position[i] + self.velocity[i]
 
             # adjust maximum position if necessary
-            if self.position_i[i] > bounds[i][1]:
-                self.position_i[i] = bounds[i][1]
+            if self.position[i] > bounds[i][1]:
+                self.position[i] = bounds[i][1]
 
             # adjust minimum position if neseccary
-            if self.position_i[i] < bounds[i][0]:
-                self.position_i[i] = bounds[i][0]
+            if self.position[i] < bounds[i][0]:
+                self.position[i] = bounds[i][0]
 
 
 class PSO:
-    def __init__(self, costFunc, x0, bounds, num_particles, maxiter):
+    def __init__(self, obj_func, x0, bounds, num_particles, maxiter):
         global num_dimensions
         # x0 is initial position of
         num_dimensions = len(x0)
@@ -80,12 +73,12 @@ class PSO:
             # print i,err_best_g
             # cycle through particles in swarm and evaluate fitness
             for j in range(0, num_particles):
-                swarm[j].evaluate(costFunc)
+                swarm[j].evaluate(obj_func)
 
                 # determine if current particle is the best (globally)
-                if swarm[j].err_i < err_best_g or err_best_g == -1:
-                    pos_best_g = list(swarm[j].position_i)
-                    err_best_g = float(swarm[j].err_i)
+                if swarm[j].error < err_best_g or err_best_g == -1:
+                    pos_best_g = list(swarm[j].position)
+                    err_best_g = float(swarm[j].error)
 
             # cycle through swarm and update velocities and position
             for j in range(0, num_particles):
