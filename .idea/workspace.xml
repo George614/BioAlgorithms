@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4715e2a4-f614-4b1c-a6d4-7ae37c6a4a84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BioAISystems.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BioAISystems.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParticleSwarm.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParticleSwarm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DifferentialEvolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/DifferentialEvolution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestFunction.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestFunction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="290">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -36,8 +35,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FireflyOpt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="17">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding>
+                <element signature="e#65#92#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://E:/Programs/Python/Lib/site-packages/yabox/problems/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
+            <state relative-caret-position="680">
               <caret line="80" selection-start-line="80" selection-end-line="80" />
             </state>
           </provider>
@@ -54,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DifferentialEvolution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="-271">
+              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -69,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ParticleSwarm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
+            <state relative-caret-position="464">
               <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
@@ -95,18 +97,18 @@
       <list>
         <option value="$PROJECT_DIR$/Firefly.py" />
         <option value="$PROJECT_DIR$/FireflyOpt.py" />
-        <option value="$PROJECT_DIR$/TestFunction.py" />
         <option value="$PROJECT_DIR$/experiments.py" />
-        <option value="$PROJECT_DIR$/DifferentialEvolution.py" />
         <option value="$PROJECT_DIR$/ParticleSwarm.py" />
+        <option value="$PROJECT_DIR$/DifferentialEvolution.py" />
+        <option value="$PROJECT_DIR$/TestFunction.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1187" />
-    <option name="y" value="10" />
+    <option name="x" value="1017" />
+    <option name="y" value="68" />
     <option name="width" value="1261" />
-    <option name="height" value="1047" />
+    <option name="height" value="1009" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -156,7 +158,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ParticleSwarm">
+  <component name="RunManager" selected="Python.DifferentialEvolution">
+    <configuration name="DifferentialEvolution" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="BioAISystems" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DifferentialEvolution.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ParticleSwarm" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="BioAISystems" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,9 +225,11 @@
     <list>
       <item itemvalue="Python.ParticleSwarm" />
       <item itemvalue="Python.TestFunction" />
+      <item itemvalue="Python.DifferentialEvolution" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DifferentialEvolution" />
         <item itemvalue="Python.TestFunction" />
       </list>
     </recent_temporary>
@@ -248,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553744650977</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished PSO &amp; APSO">
+      <created>1553971718243</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1553971718243</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -261,7 +293,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1187" y="10" width="1261" height="1047" extended-state="0" />
+    <frame x="1017" y="68" width="1261" height="1009" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18315618" />
@@ -269,7 +301,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32822758" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34246576" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39907727" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -288,28 +320,15 @@
     <MESSAGE value="add basics" />
     <MESSAGE value="add new benchmark functions" />
     <MESSAGE value="DE code modified in particle" />
-    <option name="LAST_COMMIT_MESSAGE" value="DE code modified in particle" />
+    <MESSAGE value="finished PSO &amp; APSO" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished PSO &amp; APSO" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-    <entry file="file://$PROJECT_DIR$/TestFunction.py">
+    <entry file="file://$PROJECT_DIR$/ParticleSwarm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Programs/Python/Lib/site-packages/yabox/problems/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FireflyOpt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="464">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
     </entry>
@@ -327,17 +346,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DifferentialEvolution.py">
+    <entry file="file://E:/Programs/Python/Lib/site-packages/yabox/problems/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="680">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParticleSwarm.py">
+    <entry file="file://$PROJECT_DIR$/FireflyOpt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="17">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="e#65#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DifferentialEvolution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-271">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>

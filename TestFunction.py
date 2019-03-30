@@ -33,7 +33,7 @@ def rosenbrock(x):
         y += (x[i]-1)**2 + 100*(x[i+1]-x[i]**2)**2
     return y
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
     test_a = ackley(np.zeros((7,)))
     print(test_a)
     test_e = easom(np.ones((6,))*np.pi)
