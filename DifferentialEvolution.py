@@ -4,7 +4,7 @@ Implementation of the Differential Evolution algorithm
 
 import numpy as np
 
-def diffevo(obj_func, bounds, F=0.8, Cr=0.7, pop_size=20, iterations=1000):
+def diffevo(obj_func, bounds, F=0.8, Cr=0.7, pop_size=20, iterations=10):
     dims = len(bounds)
     population = np.random.rand(pop_size, dims)
     lower_bound, upper_bound = np.asarray(bounds).T
@@ -38,8 +38,3 @@ def diffevo(obj_func, bounds, F=0.8, Cr=0.7, pop_size=20, iterations=1000):
                     idx_best = j
                     solution_best = u_denorm
         yield solution_best, fitness[idx_best]
-
-
-if __name__ == '__main__':
-    result = list(diffevo(lambda x: sum(x**2)/len(x), bounds=[(-100, 100)] * 8))
-    print(result[-1])

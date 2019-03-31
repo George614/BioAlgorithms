@@ -4,12 +4,6 @@ Implementation of the Particle Swarm Optimization algorithm, both standard versi
 
 import numpy as np
 
-def func1(x):
-    total=0
-    for i in range(len(x)):
-        total+=x[i]**2
-    return total
-
 class Particle:
     def __init__(self, bounds, dim):
         self.dim = dim
@@ -90,5 +84,3 @@ class PSO:
         print("best position: ", pos_best_g)
         print("best error: ", err_best_g)
 
-bound = [-10,10]
-PSO(func1, 2, bound, pop_size=15, max_iter=50, alpha=0.5, beta=0.5, acc=True)

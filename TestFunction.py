@@ -12,12 +12,13 @@ def four_peaks(x):
     term3 = 2 * (math.e**(-x[0]**2-x[1]**2) + math.e**(-x[0]**2-(x[1]+4)**2))
     return term1 + term2 + term3
 
-# function 28 in the book
+# function 28 in the book (modified to be a maximization problem for firefly algorithm)
 def egg_create(x):
-    return x[0]**2 + x[1]**2 + 25*(math.sin(x[0])**2 + math.sin(x[1])**2)
-# function 30 in the book
+    ret = x[0]**2 + x[1]**2 + 25*(math.sin(x[0])**2 + math.sin(x[1])**2)
+    return -ret
+# function 30 in the book, multiplied by -1 for firefly algorithm
 def exponential_(x):
-    return -np.exp(-0.5 * np.sum(np.square(x)))
+    return np.exp(-0.5 * np.sum(np.square(x)))
 
 def ackley(x):
     dim = x.size

@@ -34,10 +34,6 @@ class FireflyOptimizer:
             self.step()
         self.population.sort(key=operator.attrgetter('intensity'), reverse=True)
         return self.population[0].position, self.population[0].intensity
+               # self.population[1].position, self.population[1].intensity
 
-import TestFunction
 
-fireflyOpt = FireflyOptimizer(TestFunction.four_peaks, [-5, 5], pop_size=30, dims=2, max_iters=100)
-pos_best, intensity_best = fireflyOpt.run_optim()
-print('best solution: ', pos_best)
-print('best intensity: ', intensity_best)
