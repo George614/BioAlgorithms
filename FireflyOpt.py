@@ -3,23 +3,15 @@ Find optima of a given function using firefly algorithm
 """
 
 from Firefly import Firefly
-import numpy as np
 import operator
 
 class FireflyOptimizer:
-    def __init__(self, **kwargs):
-        self.population_size = int(kwargs.get('population_size', 10))
-        self.problem_dim = kwargs.get('problem_dim', 2)
-        self.lower_bound = kwargs.get('lower_bound', -5)
-        self.upper_bound = kwargs.get('upper_bound', 5)
-        self.generations = kwargs.get('generations', 50)
-        self.gamma = kwargs.get('gamma', 0.97)  # absorption coefficient
-        self.alpha = kwargs.get('alpha', 0.25)  # randomness [0,1]
-        self.beta_0 = kwargs.get('beta_0', 1)   # attractiveness at distance=0
-        self.benchmark = kwargs.get('benchmark', None)  # this is the function to be optimized
+    def __init__(self, obj_func, bounds, pop_size=10, dims=2, max_iters=50, alpha=0.25, beta_0=1, gamma=0.97):
+        self.benchmark = obj_func
+        self.max_iter = max_iters
         self.best = None
-        self.population = [Firefly(self.alpha,self.beta_0,self.gamma,self.lower_bound,self.upper_bound,self.problem_dim)
-                           for _ in range(self.population_size)]
+        self.population = [Firefly(alpha, beta_0, gamma, bounds[0], bounds[1], dims)
+                           for _ in range(pop_size)]
         # calculate initial intensity
         for firefly in self.population:
             firefly.update_intensity(self.benchmark)
@@ -36,3 +28,16 @@ class FireflyOptimizer:
         # update the best solution
         if not self.best or self.population[0].intensity > self.best:
             self.best = self.population[0].intensity
+
+    def run_optim(self):
+        for it in range(self.max_iter):
+            self.step()
+        self.population.sort(key=operator.attrgetter('intensity'), reverse=True)
+        return self.population[0].position, self.population[0].intensity
+
+import TestFunction
+
+fireflyOpt = FireflyOptimizer(TestFunction.four_peaks, [-5, 5], pop_size=30, dims=2, max_iters=100)
+pos_best, intensity_best = fireflyOpt.run_optim()
+print('best solution: ', pos_best)
+print('best intensity: ', intensity_best)
