@@ -82,22 +82,57 @@ n_set = [20, 40, 60]        # population size
 F_set = [0.5, 0.8]         # differential weight
 Cr_set = [0.5, 0.75]        # crossover probability
 
+# for n in n_set:
+#     for F in F_set:
+#         for Cr in Cr_set:
+#             stats = [n, F, Cr]
+#             g_best = []
+#             for trail in range(trials):
+#                 result = list(
+#                     diffevo(TestFunction.ackley, bounds=[(-35, 35)] * 8, F=F, Cr=Cr, pop_size=n, iterations=200))
+#                 [pos_best, fitness_best] = result[-1]
+#                 g_best.append(fitness_best)
+#             mean_g = np.mean(g_best)
+#             std_g = np.std(g_best)
+#             stats.extend([mean_g, std_g])
+#             print(stats)
+
+# print('Running PSO on 8 dimensional Ackley function')
+# print('pop_size, social, cognitive, inertia, mean_g_best, std_g_best:\n')
+# alpha_set = [0.5, 2]      # social constant
+# beta_set = [0.5, 2]       # cognitive constant
+# inertia_set = [0.5, 0.9]    # inertia constant
+# for n in n_set:
+#     for alpha in alpha_set:
+#         for beta in beta_set:
+#             for inertia in inertia_set:
+#                 stats = [n, alpha, beta, inertia]
+#                 g_best = []
+#                 for trial in range(trials):
+#                     pso = PSO(TestFunction.ackley, 8, [-35, 35], pop_size=n, max_iter=100, alpha=alpha, beta=beta,
+#                               inertia=inertia, acc=False)
+#                     [pos_best, fitness_best] = pso.get_result()
+#                     g_best.append(fitness_best)
+#                 mean_g = np.mean(g_best)
+#                 std_g = np.std(g_best)
+#                 stats.extend([mean_g, std_g])
+#                 print(stats)
+
+print('Running APSO on 8 dimensional Ackley function')
+print('pop_size, social, cognitive, mean_g_best, std_g_best:\n')
+alpha_set = [0.2, 0.4]           # social constant
+beta_set = [0.1, 0.5, 0.7]       # cognitive constant
 for n in n_set:
-    for F in F_set:
-        for Cr in Cr_set:
-            stats = [n, F, Cr]
+    for alpha in alpha_set:
+        for beta in beta_set:
+            stats = [n, alpha, beta]
             g_best = []
-            for trail in range(trials):
-                result = list(
-                    diffevo(TestFunction.ackley, bounds=[(-35, 35)] * 8, F=F, Cr=Cr, pop_size=n, iterations=100))
-                [pos_best, fitness_best] = result[-1]
+            for trial in range(trials):
+                apso = PSO(TestFunction.ackley, 8, [-35, 35], pop_size=n, max_iter=100, alpha=alpha, beta=beta,
+                           acc=True)
+                [pos_best, fitness_best] = apso.get_result()
                 g_best.append(fitness_best)
             mean_g = np.mean(g_best)
             std_g = np.std(g_best)
             stats.extend([mean_g, std_g])
             print(stats)
-
-
-
-# bound = [-10,10]
-# PSO(func1, 2, bound, pop_size=15, max_iter=50, alpha=0.5, beta=0.5, acc=True)

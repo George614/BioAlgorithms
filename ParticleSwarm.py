@@ -51,36 +51,34 @@ class Particle:
 class PSO:
     def __init__(self, obj_func, dimension, bounds, pop_size, max_iter, alpha,
                  acc=False, inertia=0.5, beta=2, gamma=0.95):
-        err_best_g = -1  # best error for group
-        pos_best_g = []  # best position for group
+        self.err_best_g = -1  # best global error
+        self.pos_best_g = []  # best global position
         # build the swarm
-        swarm = []
+        self.swarm = []
         for i in range(pop_size):
-            swarm.append(Particle(bounds, dimension))
+            self.swarm.append(Particle(bounds, dimension))
 
         # begin optimization loop
         it = 0
         while it < max_iter:
             # evaluate fitness for each particle
             for j in range(pop_size):
-                swarm[j].evaluate(obj_func)
+                self.swarm[j].evaluate(obj_func)
                 # determine if current particle is the global best
-                if swarm[j].error < err_best_g or err_best_g == -1:
-                    pos_best_g = list(swarm[j].position)
-                    err_best_g = float(swarm[j].error)
+                if self.swarm[j].error < self.err_best_g or self.err_best_g == -1:
+                    self.pos_best_g = list(self.swarm[j].position)
+                    self.err_best_g = float(self.swarm[j].error)
             # update velocities and positions
             if acc:  # Use APSO
-                for k  in range(pop_size):
-                    swarm[k].acc_update_velocity(beta, alpha, it, gamma, pos_best_g)
-                    swarm[k].update_position()
+                for k in range(pop_size):
+                    self.swarm[k].acc_update_velocity(beta, alpha, it, gamma, self.pos_best_g)
+                    self.swarm[k].update_position()
                 it += 1
             else:   # Use PSO
                 for k in range(pop_size):
-                    swarm[k].update_velocity(inertia, beta, alpha, pos_best_g)
-                    swarm[k].update_position()
+                    self.swarm[k].update_velocity(inertia, beta, alpha, self.pos_best_g)
+                    self.swarm[k].update_position()
                 it += 1
 
-        # print out results
-        print("best position: ", pos_best_g)
-        print("best error: ", err_best_g)
-
+    def get_result(self):
+            return self.pos_best_g, self.err_best_g
