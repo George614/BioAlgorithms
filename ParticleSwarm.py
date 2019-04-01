@@ -52,7 +52,8 @@ class PSO:
     def __init__(self, obj_func, dimension, bounds, pop_size, max_iter, alpha,
                  acc=False, inertia=0.5, beta=2, gamma=0.95):
         self.err_best_g = -1  # best global error
-        self.pos_best_g = []  # best global position
+        self.pos_best_g = None  # best global position
+        self.err_best_hist = []
         # build the swarm
         self.swarm = []
         for i in range(pop_size):
@@ -66,8 +67,9 @@ class PSO:
                 self.swarm[j].evaluate(obj_func)
                 # determine if current particle is the global best
                 if self.swarm[j].error < self.err_best_g or self.err_best_g == -1:
-                    self.pos_best_g = list(self.swarm[j].position)
+                    self.pos_best_g = self.swarm[j].position
                     self.err_best_g = float(self.swarm[j].error)
+            self.err_best_hist.append(self.err_best_g)
             # update velocities and positions
             if acc:  # Use APSO
                 for k in range(pop_size):
@@ -81,4 +83,7 @@ class PSO:
                 it += 1
 
     def get_result(self):
-            return self.pos_best_g, self.err_best_g
+        return self.pos_best_g, self.err_best_g
+
+    def get_result_hist(self):
+        return self.err_best_hist
